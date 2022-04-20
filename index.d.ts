@@ -5,6 +5,7 @@ declare module 'stormdb' {
     static browserEngine: typeof BrowserEngine;
     static localFileEngine: typeof LocalFileEngine;
 
+    reload(): void;
     default(defaultValue: object): StormDB;
     length(): StormDB;
     delete(reindexLists: boolean): void;

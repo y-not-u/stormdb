@@ -6,6 +6,11 @@ class StormDB {
     this.pointers = [];
   }
 
+  reload() {
+    this.state = this.engine.init();
+    this.pointers = [];
+  }
+
   default(defaultValue) {
     let stateEmpty =
       Object.keys(this.state).length === 0 && this.state.constructor === Object;
